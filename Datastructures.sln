@@ -11,11 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Queue", "3.Queue", "{8520
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Complexity", "4.Complexity", "{6A237AEB-45AA-440A-9442-8753AE614EB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0.WachtwoordGenerator", "WachtwoordGenerator\0.WachtwoordGenerator.csproj", "{DEB2A15E-2094-4117-A90C-7F76DB150CDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WachtwoordGenerator", "WachtwoordGenerator\WachtwoordGenerator.csproj", "{DEB2A15E-2094-4117-A90C-7F76DB150CDF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeeftijdsCalculator", "LeeftijdsCalculator\LeeftijdsCalculator.csproj", "{564F24F7-1EA7-44FA-930A-99D93C881DCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator2", "Calculator2\Calculator2.csproj", "{57C7ECF0-CF19-45A5-9251-4B832C56FF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{90AA363B-39C7-47B9-ACCA-22D5EF337DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReeksOmkeren", "ReeksOmkeren\ReeksOmkeren.csproj", "{E8BEF5E0-0FFB-4F3E-94E0-482CA9FEE3A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{57C7ECF0-CF19-45A5-9251-4B832C56FF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C7ECF0-CF19-45A5-9251-4B832C56FF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57C7ECF0-CF19-45A5-9251-4B832C56FF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AA363B-39C7-47B9-ACCA-22D5EF337DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AA363B-39C7-47B9-ACCA-22D5EF337DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AA363B-39C7-47B9-ACCA-22D5EF337DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AA363B-39C7-47B9-ACCA-22D5EF337DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8BEF5E0-0FFB-4F3E-94E0-482CA9FEE3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8BEF5E0-0FFB-4F3E-94E0-482CA9FEE3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8BEF5E0-0FFB-4F3E-94E0-482CA9FEE3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8BEF5E0-0FFB-4F3E-94E0-482CA9FEE3A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +55,8 @@ Global
 		{DEB2A15E-2094-4117-A90C-7F76DB150CDF} = {BDC6391E-BEF4-4A72-AFEA-99AE1EEB674C}
 		{564F24F7-1EA7-44FA-930A-99D93C881DCC} = {BDC6391E-BEF4-4A72-AFEA-99AE1EEB674C}
 		{57C7ECF0-CF19-45A5-9251-4B832C56FF24} = {BDC6391E-BEF4-4A72-AFEA-99AE1EEB674C}
+		{90AA363B-39C7-47B9-ACCA-22D5EF337DCC} = {6E0F2792-9A9A-4467-8CEC-6C490393BC1A}
+		{E8BEF5E0-0FFB-4F3E-94E0-482CA9FEE3A5} = {6E0F2792-9A9A-4467-8CEC-6C490393BC1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63B979FD-FFD1-47BB-886C-320C5127E9AD}
