@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.WPF", "1.WPF", "{BDC6391E-BEF4-4A72-AFEA-99AE1EEB674C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Stack", "2.Stack", "{6E0F2792-9A9A-4467-8CEC-6C490393BC1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Queue", "3.Queue", "{8520F6B1-4CFB-46A3-ABB6-87C0D6F6D0A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Complexity", "4.Complexity", "{6A237AEB-45AA-440A-9442-8753AE614EB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WachtwoordGenerator", "WachtwoordGenerator\WachtwoordGenerator.csproj", "{DEB2A15E-2094-4117-A90C-7F76DB150CDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEB2A15E-2094-4117-A90C-7F76DB150CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB2A15E-2094-4117-A90C-7F76DB150CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB2A15E-2094-4117-A90C-7F76DB150CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB2A15E-2094-4117-A90C-7F76DB150CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DEB2A15E-2094-4117-A90C-7F76DB150CDF} = {BDC6391E-BEF4-4A72-AFEA-99AE1EEB674C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63B979FD-FFD1-47BB-886C-320C5127E9AD}
+	EndGlobalSection
+EndGlobal
