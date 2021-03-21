@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B0E14A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLibrary", "Common\MyLibrary\MyLibrary.csproj", "{F8B7079D-DE2D-4B2C-B3D1-2C013DA8E78E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoFabriekje", "Queue\AutoFabriekje\AutoFabriekje.csproj", "{91974609-6D33-4C27-9E30-E65D112A468A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{F8B7079D-DE2D-4B2C-B3D1-2C013DA8E78E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8B7079D-DE2D-4B2C-B3D1-2C013DA8E78E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8B7079D-DE2D-4B2C-B3D1-2C013DA8E78E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91974609-6D33-4C27-9E30-E65D112A468A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91974609-6D33-4C27-9E30-E65D112A468A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91974609-6D33-4C27-9E30-E65D112A468A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91974609-6D33-4C27-9E30-E65D112A468A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +95,7 @@ Global
 		{8C2A0638-479D-41C3-87C7-6C162298D6C3} = {6E0F2792-9A9A-4467-8CEC-6C490393BC1A}
 		{F9554429-799E-405D-9B08-65E3F8AB2377} = {8520F6B1-4CFB-46A3-ABB6-87C0D6F6D0A3}
 		{F8B7079D-DE2D-4B2C-B3D1-2C013DA8E78E} = {B0E14A60-3A72-4E9E-8354-AF8DBB00B1DE}
+		{91974609-6D33-4C27-9E30-E65D112A468A} = {8520F6B1-4CFB-46A3-ABB6-87C0D6F6D0A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63B979FD-FFD1-47BB-886C-320C5127E9AD}
