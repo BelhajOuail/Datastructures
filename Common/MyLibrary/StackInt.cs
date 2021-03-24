@@ -30,7 +30,6 @@ namespace MyLibrary
 
         public int Pop()
         {
-
             if (IsEmpty)
                 throw new Exception("The stack is empty. Pop is not allowed");
 

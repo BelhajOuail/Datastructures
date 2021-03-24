@@ -10,19 +10,36 @@ namespace MyLibrary
     /// example a queue of size = 5 with 4 elements already in it
     ///       1 2 3 4 -  
     ///       F     R
-    /// a push with add the element at the rear position
+    /// a Enqueue(5) with add the element at the rear position
     ///       1 2 3 4 5 
     ///       F       R
-    /// a pop will remove the element at the front position
+    /// a Dequeue will remove the element at the front position
     ///       - 2 3 4 5
     ///         F     R
-    /// a push while Rear is at the end of the array will rotate Rear to the first position
+    /// a Enqueue(7) while Rear is at the end of the array will rotate Rear to the first position
     ///       7 2 3 4 5
     ///       R F
-    /// another push while the array is full will double the size and copy the elements
+    /// another Enqueue(8) while the array is full will double the size and copy the elements
     /// note that the copy takes into account the rear and front positions to make space in between them
     ///       7 8 - - - - 2 3 4 5
     ///         R         F  
+    ///
+    /// When the queue is empty, Rear points to the last position in the array
+    /// Front does not point to any element, Front is set to int.MinValue
+    ///       - - - - - 
+    ///               R  
+    /// Enqueue(3) with an empty queue will rotate Rear to index = 0 and set Front = Rear
+    ///       3 - - - -   
+    ///       R  
+    ///       F
+    /// Enqueue(8)
+    ///       3 8 - - -
+    ///         R  
+    ///       F
+    /// Dequeue()
+    ///       3 8 - - -   
+    ///         R  
+    ///         F
     /// </summary>
     public class CircularQueueInt
     {
@@ -45,6 +62,11 @@ namespace MyLibrary
             Rear = length - 1;              //start at the last position    
         }
 
+        /// <summary>
+        /// Add an element to the end of the queue
+        /// If the queue is full (and AutoSize is set), the Queue is doubled in size
+        /// </summary>
+        /// <param name="value">The value to be added to the queue</param>
         public void Enqueue(int value)
         {
             if (IsFull)
@@ -80,6 +102,10 @@ namespace MyLibrary
             PrintQueue();
         }
 
+        /// <summary>
+        /// Get the first element waiting in the queue
+        /// </summary>
+        /// <returns>the value of the first element</returns>
         public int Dequeue()
         {
             if (IsEmpty)
@@ -96,6 +122,9 @@ namespace MyLibrary
             return result;
         }
 
+        /// <summary>
+        /// Check if the queue is empty
+        /// </summary>
         public bool IsEmpty
         {
             get
@@ -104,6 +133,9 @@ namespace MyLibrary
             }
         }
 
+        /// <summary>
+        /// Check if the queue is Full
+        /// </summary>
         public bool IsFull
         {
             get
