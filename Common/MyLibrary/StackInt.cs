@@ -7,7 +7,7 @@ namespace MyLibrary
     public class StackInt
     {
         private int[] stackArray;
-        private int top = 0;
+        private int top = -1;
 
         public StackInt(int InitialSize = 5)
         {
@@ -25,7 +25,7 @@ namespace MyLibrary
                 stackArray = newArray;
             }
 
-            stackArray[top++] = getal;
+            stackArray[++top] = getal;
         }
 
         public int Pop()
@@ -33,7 +33,7 @@ namespace MyLibrary
             if (IsEmpty)
                 throw new Exception("The stack is empty. Pop is not allowed");
 
-            return stackArray[--top];
+            return stackArray[top--];
         }
 
         public int Peek()
@@ -41,14 +41,14 @@ namespace MyLibrary
             if (IsEmpty)
                 throw new Exception("The stack is empty. Peek is not allowed");
 
-            return stackArray[top - 1];
+            return stackArray[top];
         }
 
         public bool IsEmpty
         {
             get
             {
-                return top == 0;
+                return top == -1;
             }
         }
 
@@ -56,7 +56,7 @@ namespace MyLibrary
         {
             get
             {
-                return top == stackArray.Length;
+                return top == stackArray.Length -1;
             }
         }
 
@@ -64,9 +64,9 @@ namespace MyLibrary
         {
             get
             {
-                int[] temp = new int[top];
-                if (top != 0)
-                    Array.Copy(stackArray, temp, top);
+                int[] temp = new int[top+1];
+                if (!IsEmpty)
+                    Array.Copy(stackArray, temp, top+1);
                 return temp;
             }
         }
