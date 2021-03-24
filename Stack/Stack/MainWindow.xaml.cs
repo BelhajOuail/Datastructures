@@ -68,12 +68,12 @@ namespace Stack
         #region stack logica
 
         int[] stackArray = new int[5];
-        int top = 0;
+        int top = -1;
 
 
         public void Push(int getal)
         {
-            if (top == stackArray.Length)                   //uitbreiding voor Stack versie 2
+            if (IsFull())                   //uitbreiding voor Stack versie 2
             {
                 var newArray = new int[stackArray.Length * 2];
                 Array.Copy(stackArray, newArray, stackArray.Length);
@@ -82,7 +82,7 @@ namespace Stack
                 stackArray = newArray;
             }                                               //einde uitbreiding voor stack versie 2
 
-            stackArray[top++] = getal;
+            stackArray[++top] = getal;
             ShowStack();
         }
 
@@ -90,8 +90,9 @@ namespace Stack
         {
             if (!IsEmpty())
             {
-                int value = stackArray[--top];
+                int value = stackArray[top];
                 stackArray[top] = 0;            //niet strict nodig, maar duidelijker om te debuggen
+                top--;
                 ShowStack();
                 return value;
             }
@@ -101,12 +102,12 @@ namespace Stack
 
         public bool IsEmpty()
         {
-            return top == 0;
+            return top == -1;
         }
 
         public bool IsFull()
         {
-            return top == stackArray.Length;
+            return top == stackArray.Length - 1;
         }
 
 

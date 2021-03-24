@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLibrary;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -86,12 +87,12 @@ namespace WiskundigeExpressie
         #region stack logica
 
         string[] stackArray = new string[5];
-        int top = 0;
+        int top = -1;
 
 
         public void Push(string getal)
         {
-            if (top == stackArray.Length)                   //uitbreiding voor Stack versie 2
+            if (IsFull())                   //uitbreiding voor Stack versie 2
             {
                 var newArray = new string[stackArray.Length * 2];
                 Array.Copy(stackArray, newArray, stackArray.Length);
@@ -100,7 +101,7 @@ namespace WiskundigeExpressie
                 stackArray = newArray;
             }                                               //einde uitbreiding voor stack versie 2
 
-            stackArray[top++] = getal;
+            stackArray[++top] = getal;
             ShowStack();
         }
 
@@ -108,8 +109,9 @@ namespace WiskundigeExpressie
         {
             if (!IsEmpty())
             {
-                var value = stackArray[--top];
+                var value = stackArray[top];
                 stackArray[top] = null;            //niet strict nodig, maar duidelijker om te debuggen
+                top--;
                 ShowStack();
                 return value;
             }
@@ -119,12 +121,12 @@ namespace WiskundigeExpressie
 
         public bool IsEmpty()
         {
-            return top == 0;
+            return top == -1;
         }
 
         public bool IsFull()
         {
-            return top == stackArray.Length;
+            return top == stackArray.Length-1;
         }
 
         /// <summary>
@@ -132,7 +134,7 @@ namespace WiskundigeExpressie
         /// </summary>
         public void Clear()
         {
-            top = 0;
+            top = -1;
         }
 
         public void ShowStack()

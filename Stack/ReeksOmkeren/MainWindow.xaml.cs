@@ -43,12 +43,12 @@ namespace ReeksOmkeren
         #region stack logica
 
         int[] stackArray = new int[10];
-        int top = 0;
+        int top = -1;
 
 
         public void Push(int getal)
         {
-            if (top == stackArray.Length)
+            if (IsFull())
             {
                 var newArray = new int[stackArray.Length * 2];
                 for (int f = 0; f < stackArray.Length; f++)
@@ -56,14 +56,14 @@ namespace ReeksOmkeren
                 stackArray = newArray;
             }
 
-            stackArray[top++] = getal;
+            stackArray[++top] = getal;
         }
 
         public int Pop()
         {
             if (!IsEmpty())
             {
-                return stackArray[--top];
+                return stackArray[top--];
             }
 
             return -999999999;
@@ -71,12 +71,12 @@ namespace ReeksOmkeren
 
         public bool IsEmpty()
         {
-            return top == 0;
+            return top == -1;
         }
 
         public bool IsFull()
         {
-            return top == stackArray.Length;
+            return top == stackArray.Length - 1;
         }
 
 

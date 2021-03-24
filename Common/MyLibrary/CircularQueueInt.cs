@@ -23,7 +23,17 @@ namespace MyLibrary
     /// note that the copy takes into account the rear and front positions to make space in between them
     ///       7 8 - - - - 2 3 4 5
     ///         R         F  
-    ///
+
+
+
+    ///       7 2 3 4 5
+    ///           R F
+    /// another Enqueue(8) while the array is full will double the size and copy the elements
+    /// note that the copy takes into account the rear and front positions to make space in between them
+     //         7 2 3 3 8 - - - 4 5   
+    ///                 R       F     
+    ///         
+    /// 
     /// When the queue is empty, Rear points to the last position in the array
     /// Front does not point to any element, Front is set to int.MinValue
     ///       - - - - - 
@@ -49,6 +59,7 @@ namespace MyLibrary
         private int Front = int.MinValue;    // Minvalue => Queue is empty !
         private int Rear;
 
+        
         /// <summary>
         /// Create a new queue with the specified (initial) length
         /// </summary>
@@ -59,7 +70,7 @@ namespace MyLibrary
             length = InitialLength;
             autoResize = AutoResize;
             queue = new int[length];
-            Rear = length - 1;              //start at the last position    
+            Rear = length - 1;              //start at the last position
         }
 
         /// <summary>
@@ -80,11 +91,11 @@ namespace MyLibrary
                 {
                     if (f <= Rear)
                     {
-                        temp[f] = queue[f];
+                        temp[f] = queue[f];             //vooraan
                     }
                     else
                     {
-                        temp[f + (temp.Length - queue.Length)] = queue[f];
+                        temp[f + (temp.Length - queue.Length)] = queue[f];  //achteraan
                     }
                 }
                 if (Front != 0) 
