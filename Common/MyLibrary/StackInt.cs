@@ -4,65 +4,52 @@ using System.Text;
 
 namespace MyLibrary
 {
-    public  class StackInt
+    public class StackInt
     {
         private int[] stackArray;
         private int top = 0;
 
-        public StackInt(int InitialSize)
+        public StackInt(int InitialSize = 5)
         {
             stackArray = new int[InitialSize];
         }
 
         public void Push(int getal)
         {
-            lock (this)
+            if (IsFull)
             {
-
-                if (IsFull)
-                {
-                    var newArray = new int[stackArray.Length * 2];
-                    for (int f = 0; f < stackArray.Length; f++)
-                        newArray[f] = stackArray[f];
-                    stackArray = newArray;
-                }
-
-                stackArray[top++] = getal;
+                var newArray = new int[stackArray.Length * 2];
+                Array.Copy(stackArray, newArray, stackArray.Length);
+                //for (int f = 0; f < stackArray.Length; f++)   //alternatief
+                //    newArray[f] = stackArray[f];
+                stackArray = newArray;
             }
+
+            stackArray[top++] = getal;
         }
 
         public int Pop()
         {
-            lock (this)
-            {
 
-                if (IsEmpty)
-                    throw new Exception("The stack is empty. Pop is not allowed");
+            if (IsEmpty)
+                throw new Exception("The stack is empty. Pop is not allowed");
 
-                return stackArray[--top];
-            }
+            return stackArray[--top];
         }
 
         public int Peek()
         {
-            lock (this)
-            {
+            if (IsEmpty)
+                throw new Exception("The stack is empty. Peek is not allowed");
 
-                if (IsEmpty)
-                    throw new Exception("The stack is empty. Peek is not allowed");
-
-                return stackArray[top - 1];
-            }
+            return stackArray[top - 1];
         }
 
         public bool IsEmpty
         {
             get
             {
-                lock (this)
-                {
-                    return top == 0;
-                }
+                return top == 0;
             }
         }
 
@@ -70,10 +57,7 @@ namespace MyLibrary
         {
             get
             {
-                lock (this)
-                {
-                    return top == stackArray.Length;
-                }
+                return top == stackArray.Length;
             }
         }
 
@@ -81,13 +65,10 @@ namespace MyLibrary
         {
             get
             {
-                lock (this)
-                {
-                    int[] temp = new int[top];
-                    if (top != 0)
-                        Array.Copy(stackArray, temp, top);
-                    return temp;
-                }
+                int[] temp = new int[top];
+                if (top != 0)
+                    Array.Copy(stackArray, temp, top);
+                return temp;
             }
         }
     }
